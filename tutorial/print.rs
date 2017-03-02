@@ -13,7 +13,7 @@ fn main() {
     // print a struct
     #[allow(dead_code)]
     struct S(i32);
-    // println!("struct: {}", S(5)); // throws error
+    // println!("struct: {:?}", S(5)); // throws error
 
 
     // Activity
