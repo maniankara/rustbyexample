@@ -22,4 +22,19 @@ fn main() {
 
     // println!("Value of a is: {}",b); // value b used here after move
 
+
+    //************ Mutability Possibility *************//
+
+    let a = Box::new(5i32);
+    // a = Box::new(4); // compiler error
+
+    println!("This by default is immutable box: {}",a);
+
+    let mut b = a;
+
+    b = Box::new(4);
+
+    println!("This is a mutable box: {}",b);
+
+
 }
