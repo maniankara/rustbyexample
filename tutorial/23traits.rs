@@ -11,7 +11,7 @@ trait Animal {
 
     fn noise(&self) -> & 'static str;
 
-    // implemented method
+    // implemented method inside a trait
     fn talk(&self) {
         println!("{} says {}", self.name(), self.noise());
     }
