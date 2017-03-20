@@ -14,6 +14,7 @@ fn main() {
         );
     }
 
+    // waiter
     for c in children {
         let _ = c.join();
     }
