@@ -9,3 +9,8 @@ rust:
 matrix:
   allow_failures:
     - rust: nightly
+
+
+install:
+  gem install fpm --no-rdoc --no-ri
+  fpm -t deb -s dir -a all -n rustbyexample -v $(cargo pkgid| awk -F'#' {'print $2'}) target/debug/rustbyexample
