@@ -26,3 +26,4 @@ deploy:
   repository: maniankara/rustbyexample
   username: maniankara
   dist: debian/stretch
+  skip_cleanup: true
