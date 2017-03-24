@@ -1,0 +1,13 @@
+# Sample travis
+language: rust
+
+rust:
+  - nightly
+  - beta
+  - stable
+
+matrix:
+  allow_failures:
+    - rust: nightly
+
+

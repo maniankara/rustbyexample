@@ -1,0 +1,13 @@
+[package]
+name = "rustbyexample"
+version = "0.0.1"
+authors = ["Maniankara<maniankara@gmail.com>"]
+
+
+[[bin]]
+name = "rustbyexample"
+path = "tutorial/26std/40channel.rs"
+
+# [[bin]]
+# name = "test-server"
+# path = "src/test-server.rs"
