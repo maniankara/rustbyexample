@@ -16,7 +16,7 @@ install:
 after_success:
 - mkdir opt
 - cp target/debug/rustbyexample opt
-- fpm -t deb -s dir -a all -n rustbyexample -v $(cargo pkgid| awk -F'#' {'print $2'}) opt
+- fpm -t deb -s dir -a all -n rustbyexample -v $TRAVIS_TAG opt
 
 deploy:
   auth: 
