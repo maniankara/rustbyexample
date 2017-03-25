@@ -14,7 +14,11 @@ install:
 - gem install package_cloud --no-ri --no-rdoc
 
 after_success:
-- "if [ -n \"${TRAVIS_TAG}\" ]; then  mkdir opt; cp target/debug/rustbyexample opt; fpm -t deb -s dir -a all -n rustbyexample -v ${TRAVIS_TAG} opt; fi"
+- if [ -n \"${TRAVIS_TAG}\" ]; then
+  mkdir opt;
+  cp target/debug/rustbyexample opt;
+  fpm -t deb -s dir -a all -n rustbyexample -v ${TRAVIS_TAG} opt;
+  fi
 
 deploy:
   auth: 
